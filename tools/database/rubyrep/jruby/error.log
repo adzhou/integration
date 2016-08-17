@@ -1,0 +1,26 @@
+IOError: closed stream
+                              write at org/jruby/RubyIO.java:1432
+                              write at org/jruby/RubyIO.java:1411
+                              write at org/jruby/RubyIO.java:2548
+                              print at org/jruby/RubyIO.java:1593
+                              print at org/jruby/RubyKernel.java:562
+                block in eval_input at C:/jruby9/lib/ruby/stdlib/irb.rb:478
+                      signal_status at C:/jruby9/lib/ruby/stdlib/irb.rb:623
+                block in eval_input at C:/jruby9/lib/ruby/stdlib/irb.rb:468
+                               call at org/jruby/RubyProc.java:308
+                          buf_input at C:/jruby9/lib/ruby/stdlib/irb/ruby-lex.rb:188
+                               getc at C:/jruby9/lib/ruby/stdlib/irb/ruby-lex.rb:103
+                           match_io at C:/jruby9/lib/ruby/stdlib/irb/slex.rb:205
+                              match at C:/jruby9/lib/ruby/stdlib/irb/slex.rb:75
+                              token at C:/jruby9/lib/ruby/stdlib/irb/ruby-lex.rb:282
+                                lex at C:/jruby9/lib/ruby/stdlib/irb/ruby-lex.rb:264
+  block in each_top_level_statement at C:/jruby9/lib/ruby/stdlib/irb/ruby-lex.rb:235
+                               loop at org/jruby/RubyKernel.java:1292
+  block in each_top_level_statement at C:/jruby9/lib/ruby/stdlib/irb/ruby-lex.rb:231
+                              catch at org/jruby/RubyKernel.java:1099
+           each_top_level_statement at C:/jruby9/lib/ruby/stdlib/irb/ruby-lex.rb:230
+                         eval_input at C:/jruby9/lib/ruby/stdlib/irb.rb:485
+                     block in start at C:/jruby9/lib/ruby/stdlib/irb.rb:395
+                              catch at org/jruby/RubyKernel.java:1099
+                              start at C:/jruby9/lib/ruby/stdlib/irb.rb:394
+                              <top> at C:\jruby9\/bin/jirb_swing:63

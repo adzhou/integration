@@ -1,0 +1,48 @@
+* PostgreSQL
+
+With version 8.0 or better, simply use the pgxs GNU makefile provided:
+
+	sh> make install
+
+
+You must only insure that the "pg_config" found in your path is the one
+of the target postgresql server, and that development packages are installed.
+
+Then load the needed extensions (casts, checksum functions, xor aggregate):
+
+	sh> cat pgc_*.sql xor_aggregate.sql | psql ...
+
+To uninstall, do:
+
+	sh> make uninstall
+
+
+* MySQL
+
+You need "mysql_config" and the development packages.
+
+	sh> make mysql_install
+
+Then load the needed extensions (casts, checksum functions):
+
+	sh> cat mysql_*.sql | mysql ...
+        # under Ubuntu this requires appending "/usr/lib/mysql/plugin/* rm,"
+        # to "/etc/apparmor.d/usr.sbin.mysqld" and restarting apparmor.
+
+To uninstall, do:
+
+   	sh> make mysql_uninstall
+
+
+* SQLite
+
+You need the sqlite3-dev package to compile extensions.
+
+	sh> make sqlite_install
+
+See "sqlite_checksum.sql" file for loading checksum functions and
+an integer xor aggregate.
+
+To uninstall, do:
+
+   	sh> make sqlite_uninstall
