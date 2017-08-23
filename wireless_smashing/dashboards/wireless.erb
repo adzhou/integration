@@ -1,0 +1,63 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  Dashing.gridsterLayout('[{"col":1,"row":1},{"col":2,"row":1},{"col":3,"row":1},{"col":5,"row":1},{"col":1,"row":2},{"col":2,"row":2},{"col":3,"row":2},{"col":4,"row":2},{"col":2,"row":3}]')
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 5
+});
+</script>
+
+
+<% content_for :title do %>Welcome to Wireless <% end %>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1"  onclick="location.href='https://www.sonicwall.com/en-br/products/firewalls/wireless-security'">
+      <div data-view="Image" data-image="/sonicwall_wireless.png"></div>
+    </li>
+	
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="wirelessp4" data-view="Text" data-title="Wireless P4" data-moreinfo="Wireless P4 Server: \n 10.103.49.245: 1818 " data-min="0" data-max="100"></div>
+    </li>
+    <li data-row="1" data-col="3" data-sizex="2" data-sizey="1" onclick="location.href='https://10.103.49.245'"> 
+      <div data-id="GitLab" data-view="Text" data-title="GitLab" data-text="Wireless GitLab!"></div>
+    </li>
+
+	<li data-row="1" data-col="5" data-sizex="1" data-sizey="1" onclick="location.href='https://engineering.eng.sonicwall.com/'"> 
+      <div data-id="Confluence" data-view="Text" data-title="Confluence" data-text="Confluence Link!"></div>
+    </li>	
+
+	
+	
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="buzzwords" data-view="List" data-unordered="true" data-title="Jira Track" data-moreinfo="# of times said around the office" onclick="location.href='https://track.eng.sonicwall.com/'"></div>
+    </li>
+
+	
+    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="sonicwallp4" data-view="Text" data-title="SonicWall P4" data-moreinfo="P4 Server: 10.190.202.23/24: 1999" data-min="0" data-max="100"></div>
+    </li>
+<!--
+   <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+      <i class="fa fa-clock-o icon-background"></i>
+    </li>
+-->
+	<li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="sonicdts" data-view="Text" data-moreinfo="In sync with my neighbour!" data-title="SonicWall DTS" data-min="0" data-max="100" onclick="location.href='http://sonicdts.eng.sonicwall.com/'"></div>
+    </li>
+	
+    <li data-row="2" data-col="4" data-sizex="2" data-sizey="2">
+      <div data-id="convergence" data-view="Graph" data-title="Sonar DashBoard" style="background-color:#47bbb3;"></div>
+    </li>
+
+ 
+
+
+    <li data-row="3" data-col="2" data-sizex="2" data-sizey="1">
+      <div data-id="sonicwall wiki" data-view="Comments" style="background-color:#ff9618;" data-title="SonicWall Wiki"  data-moreinfo="sonicwall wiki" onclick="location.href='https://wiki.eng.sonicwall.com'"></div>
+    <!--  <i class="fa fa-twitter icon-background"></i>-->
+    </li>
+
+  </ul>
+</div>
